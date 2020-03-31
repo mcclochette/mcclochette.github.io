@@ -2,32 +2,35 @@
 <html>
 
 <style>
-    body {background-color: aquamarine;}
+    body {
+        background-image: url('./dog.jpg');
+        background-attachment: fixed;
+        background-size: cover;
+    }
 </style>
 
-
-
 <body>
-    
+
     <center>
     <h1>Dogs Bruh</h1>
     <h3>We don't deserve 'em</h3>
-    <video width="300" height="560" controls>
-        <source src="db1.mp4" type="video/mp4">
-        
+    <video width=auto height=auto controls>
+        <source id="video" type="video/mp4">
     </video>
     <p></p>
-
-    <a href="Index5.html">previous</a> <a href="Index2.html">next</a>
+    <button>
+        <a href="index.html">next</a>
+    </button>
     </center>
 
     <address>
-        S/O Rex Chapman & Big Cat
+        S/O Rex Chapman
     </address>
-
-    
-
-
-
-
+<script>
+    var path = "video/db";
+    path = path.concat((Math.floor(Math.random() * 5) + 1).toString());
+    path = path.concat(".mp4")
+    var video = document.getElementById('video').src = path;
+</script>
+</body>
 </html>
